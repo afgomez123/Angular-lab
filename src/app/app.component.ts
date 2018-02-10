@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
   // titulo de la aplicaciòn
   title = 'Ingresar nombre y presione enter:   ';
-  response: any;
+  response: any = undefined;
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,6 @@ export class AppComponent implements OnInit {
 
   getNameGender(name) {
     this.http.get('https://api.genderize.io/?name=' + name).subscribe((res) => {
-      
       this.response = res;
     });
   }
