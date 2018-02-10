@@ -64,7 +64,7 @@ var AppComponent = /** @class */ (function () {
     function AppComponent(http) {
         this.http = http;
         // titulo de la aplicaciòn
-        this.title = 'Ingresar Nombre:  ';
+        this.title = 'Ingresar Nombre:   ';
     }
     AppComponent.prototype.ngOnInit = function () { };
     AppComponent.prototype.getNameGender = function (name) {
