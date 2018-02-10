@@ -1,19 +1,31 @@
 <html>
 <head>
+    
 </head>
+<body>
+  
+
 <div style="margin-left:45%;margin-top:10%;">
-    <strong>{{title}}</strong>
-    <br>
-    <br>
+
+    <h4><strong>{{title}}</strong></h4>
+    
+    
+    
     <mat-form-field class="example-full-width">
-      <input matInput type="text" name="" id="" (keyup.enter)="getName($event)">
-      </mat-form-field>
-<div>
-        <pre>
-          {{response | json}}
-        </pre>
+      <input matInput type="text"   maxlength="10"  required name="" id="" (keyup.enter)="getName($event)"  >
+    </mat-form-field>
+      
+    <div>       
+        <div><strong>Nombre:</strong>{{response?.name}}</div>
+        <div><strong>Genero:</strong>{{response?.gender}}</div>
+        <div><strong>Probabilidad:</strong>{{response?.probability}}</div>
+       <div><strong>Numero:</strong>{{response?.count}}</div>
       </div>
+    
   </div>
+
+</body>
+
 </html>
 
 

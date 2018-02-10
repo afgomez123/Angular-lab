@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class AppComponent implements OnInit {
   // titulo de la aplicaciòn
-  title = 'Ingresar Nombre:   ';
+  title = 'Ingresar nombre y presione enter:   ';
   response: any;
 
   constructor(private http: HttpClient) { }
@@ -25,11 +25,10 @@ export class AppComponent implements OnInit {
 
   getName(event) {
     let name = event.target.value;
-    this.getNameGender(name);
-
-  }
-
-
+      if(name){
+      this.getNameGender(name)
+    }
+}
 }
 
 

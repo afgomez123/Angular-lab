@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n<head>\n</head>\n<div style=\"margin-left:45%;margin-top:10%;\">\n    <strong>{{title}}</strong>\n    <br>\n    <br>\n    <mat-form-field class=\"example-full-width\">\n      <input matInput type=\"text\" name=\"\" id=\"\" (keyup.enter)=\"getName($event)\">\n      </mat-form-field>\n<div>\n        <pre>\n          {{response | json}}\n        </pre>\n      </div>\n  </div>\n</html>\n\n\n"
+module.exports = "<html>\n<head>\n    \n</head>\n<body>\n  \n\n<div style=\"margin-left:45%;margin-top:10%;\">\n\n    <h4><strong>{{title}}</strong></h4>\n    \n    \n    \n    <mat-form-field class=\"example-full-width\">\n      <input matInput type=\"text\"   maxlength=\"10\"  required name=\"\" id=\"\" (keyup.enter)=\"getName($event)\"  >\n    </mat-form-field>\n      \n    <div>       \n        <div><strong>Nombre:</strong>{{response?.name}}</div>\n        <div><strong>Genero:</strong>{{response?.gender}}</div>\n        <div><strong>Probabilidad:</strong>{{response?.probability}}</div>\n       <div><strong>Numero:</strong>{{response?.count}}</div>\n      </div>\n    \n  </div>\n\n</body>\n\n</html>\n\n\n"
 
 /***/ }),
 
@@ -64,7 +64,7 @@ var AppComponent = /** @class */ (function () {
     function AppComponent(http) {
         this.http = http;
         // titulo de la aplicaciòn
-        this.title = 'Ingresar Nombre:   ';
+        this.title = 'Ingresar nombre y presione enter:   ';
     }
     AppComponent.prototype.ngOnInit = function () { };
     AppComponent.prototype.getNameGender = function (name) {
@@ -75,7 +75,9 @@ var AppComponent = /** @class */ (function () {
     };
     AppComponent.prototype.getName = function (event) {
         var name = event.target.value;
-        this.getNameGender(name);
+        if (name) {
+            this.getNameGender(name);
+        }
     };
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
