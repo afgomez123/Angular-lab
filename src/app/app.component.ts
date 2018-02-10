@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class AppComponent implements OnInit {
   // titulo de la aplicaciòn
-  title = 'Ingresar Nombre  ';
+  title = 'Ingresar Nombre:  ';
   response: any;
 
   constructor(private http: HttpClient) { }

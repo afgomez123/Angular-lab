@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"margin-left:45%;margin-top:10%;\">\n  <strong>{{title}}</strong>\n  <br>\n  <br>\n  <input type=\"text\" name=\"\" id=\"\" (keyup.enter)=\"getName($event)\">\n  <div>\n      <pre>\n        {{response | json}}\n      </pre>\n    </div>\n</div>\n\n\n\n\n\n"
+module.exports = "<html>\n<head>\n</head>\n<div style=\"margin-left:45%;margin-top:10%;\">\n    <strong>{{title}}</strong>\n    <br>\n    <br>\n    <mat-form-field class=\"example-full-width\">\n      <input matInput type=\"text\" name=\"\" id=\"\" (keyup.enter)=\"getName($event)\">\n      </mat-form-field>\n<div>\n        <pre>\n          {{response | json}}\n        </pre>\n      </div>\n  </div>\n</html>\n\n\n"
 
 /***/ }),
 
@@ -64,7 +64,7 @@ var AppComponent = /** @class */ (function () {
     function AppComponent(http) {
         this.http = http;
         // titulo de la aplicaciòn
-        this.title = 'Ingresar Nombre  ';
+        this.title = 'Ingresar Nombre:  ';
     }
     AppComponent.prototype.ngOnInit = function () { };
     AppComponent.prototype.getNameGender = function (name) {
@@ -101,6 +101,8 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -111,17 +113,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["H" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */]
+                __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_material__["a" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_material__["b" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_material__["c" /* MatInputModule */]
             ],
             providers: [],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
@@ -164,7 +172,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
